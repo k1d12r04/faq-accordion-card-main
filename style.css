@@ -35,13 +35,12 @@ img{
 }
 
 body{
-  height: 100vh;
+  height: 150vh;
   font-family: var(--ff-primary);
-  background: var(--bg);
+  background-image: var(--bg);
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-top: 15rem;
-  padding-bottom: 5rem;
 }
 
 .container{
@@ -58,12 +57,13 @@ body{
   box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.4);
   position: relative;
   padding: 15rem 0 3rem;
+  margin-top: 15rem;
 }
 
 .faq__woman-svg{
   position: absolute;
   left: 50%;
-  top: -2%;
+  top: -5%;
   transform: translate(-50%, -50%);
   width: 70%;
 }
@@ -94,6 +94,7 @@ body{
 .faq__question__title{
   cursor: pointer;
   font-size: 1.3rem;
+  transition: all .2s ease-in-out;
 }
 
 .faq__question__title:hover{
@@ -105,14 +106,11 @@ body{
   cursor: pointer;
 }
 
-.make-arrow-up{
-  transform: rotate(180deg);
-}
 
 .faq__question__answer{
   color: var(--clr-text-dark);
   width: 85%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   display: none;
@@ -124,6 +122,18 @@ body{
   margin-bottom: 1rem;
 }
 
+/* change with click */
+
 .active{
   display: block;
 }
+
+.make-arrow-up{
+  transform: rotate(180deg);
+}
+
+.make-text-bold{
+  color: var(--clr-title);
+  font-weight: bold;
+}
+

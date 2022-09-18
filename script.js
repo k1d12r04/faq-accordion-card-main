@@ -7,6 +7,7 @@ questionEl.forEach((question) => {
     answerEl.forEach((answer) => {
       if (question.id === answer.id) {
         answer.classList.toggle("active");
+        question.classList.toggle("make-text-bold");
       }
     });
   });
@@ -23,3 +24,4 @@ arrowEl.forEach((arrow) => {
     });
   });
 });
+

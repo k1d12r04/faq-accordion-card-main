@@ -8,11 +8,16 @@ questionEl.forEach((question) => {
       if (question.id === answer.id) {
         answer.classList.toggle("active");
         question.classList.toggle("make-text-bold");
+
+        arrowEl.forEach((arrow) => {
+          if (arrow.id === answer.id) {
+            arrow.classList.toggle("make-arrow-up");
+          }
+        });
       }
     });
   });
 });
-
 
 arrowEl.forEach((arrow) => {
   arrow.addEventListener("click", () => {
@@ -24,4 +29,3 @@ arrowEl.forEach((arrow) => {
     });
   });
 });
-

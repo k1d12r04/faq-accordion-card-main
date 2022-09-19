@@ -35,7 +35,7 @@ img{
 }
 
 body{
-  height: 150vh;
+  height: 130vh;
   font-family: var(--ff-primary);
   background-image: var(--bg);
   display: flex;
@@ -51,28 +51,43 @@ body{
 
 .faq{
   background-color: #fff;
-  width: min(90%, 40rem);
+  width: min(90%, 90rem);
   margin-inline: auto;
   border-radius: 2rem;
   box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.4);
   position: relative;
   padding: 15rem 0 3rem;
-  margin-top: 15rem;
+  margin-top: 20rem;
+  margin-bottom: 5rem;
 }
 
-.faq__woman-svg{
+.faq__woman-svg__mobile{
   position: absolute;
   left: 50%;
-  top: -5%;
-  transform: translate(-50%, -50%);
-  width: 70%;
+  top: 0;
+  transform: translate(-50%, -60%);
+  max-width: 70%;
 }
 
-.faq__pattern-svg{
+.faq__pattern-svg__mobile{
   position: absolute;
   left: 50%;
-  top: 10%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  transform: translate(-50%, 0%);
+  width: 50%;
+  max-width: 70%;
+}
+
+.faq__woman-svg__desktop{
+  display: none;
+}
+
+.faq__box-svg__desktop{
+  display: none;
+}
+
+.faq__pattern-svg__desktop{
+  display: none;
 }
 
 .faq__title{
@@ -85,10 +100,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--clr-text-dark);
   font-size: 1.2rem;
-  
 }
 
 .faq__question__title{
@@ -137,3 +151,51 @@ body{
   font-weight: bold;
 }
 
+/* media queries */
+
+@media only screen and (min-width: 50em) {
+  .faq{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 5rem 5rem 5rem 0;
+   
+  }
+  .faq__pattern-svg__mobile,
+  .faq__woman-svg__mobile{
+    display: none;
+  }
+  .faq__pattern-svg__desktop,
+  .faq__woman-svg__desktop,
+  .faq__box-svg__desktop{
+    position: absolute;
+  }
+  .faq__woman-svg__desktop{
+    display: block;
+    width: 40%;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+  .faq__box-svg__desktop{
+    display: block;
+    width: 20%;
+    top: 60%;
+    left: 0%;
+    transform: translate(-52%, -57%);
+  }
+  .faq__pattern-svg__desktop{
+    display: block;
+    width: 50%;
+    top: 50%;
+    left: 10%;
+    transform: translate(-52%, -50%);
+  }
+  .faq__title{
+    text-align: left;
+    margin-bottom: 5rem;
+  }
+  .faq__question__title{
+    margin-bottom: 2rem;
+  }
+}

@@ -25,6 +25,12 @@ arrowEl.forEach((arrow) => {
       if (arrow.id === answer.id) {
         answer.classList.toggle("active");
         arrow.classList.toggle("make-arrow-up");
+
+        questionEl.forEach((question) => {
+          if (question.id === answer.id) {
+            question.classList.toggle("make-text-bold");
+          }
+        });
       }
     });
   });
